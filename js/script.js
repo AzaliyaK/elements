@@ -1,21 +1,58 @@
 "use strict";
 
 const box = document.getElementById("box");
-console.log(box);
 const btns = document.getElementsByTagName("button");
-console.log(btns);
-console.log(btns[2]);
-const btn2 = document.getElementsByTagName("button")[1];
-console.log(btn2);
-
 const circles = document.getElementsByClassName("circle");
-console.log(circles);
-console.log(circles[1]);
-
 const hearts = document.querySelectorAll(".heart");
+const oneHeart = document.querySelector(".heart");
+const wrapper = document.querySelector(".wrapper");
+
+btns[1].style.borderRadius = "100%";
+circles[0].style.backgroundColor = "red";
+
+// box.style.width = "500px";
+// box.style.backgroundColor = "yellow";
+box.style.cssText = "background-color: blue; width: 500px";
+
+//
 hearts.forEach((item) => {
-  console.log(item);
+  item.style.backgroundColor = "mistyrose";
 });
 
-const oneHeart = document.querySelector(".heart");
-console.log(oneHeart);
+const div = document.createElement("div");
+// const text = document.createTextNode("Слава Роду!");
+div.classList.add("black");
+// document.body.append(div);
+
+// добавить перед завершающим тегом
+wrapper.append(div);
+// добавить в начало
+// wrapper.prepend(div);
+
+// div before hearts[0]:
+// hearts[0].before(div);
+
+//  div after hearts[0]:
+// hearts[0].after(div);
+
+// delete item:
+// circles[0].remove();
+
+// заменить один элем другим: 1- что, 2 - чем
+// hearts[1].replaceWith(circles[0]);
+
+// Устаревшие конструкции:
+// wrapper.appendChild(div);
+// wrapper.insertBefore(div, hearts[1]);
+// родитель            чем         что
+// wrapper.replaceChild(circles[1], hearts[1]);
+// wrapper.removeChild(hearts[1]);
+// можно вставлять теги
+div.innerHTML = "<h1>Слава Роду!</h1>";
+//  можно вставлять только текст
+// div.textContent = "Слава Ладе!";
+
+// вставляем кусочек кода перед- или после- определенных тегов
+//  элемент, с которым работаем
+// div.insertAdjacentHTML("beforebegin", "<h2>Hello</h2>");
+div.insertAdjacentHTML("afterend", "<h2>Hello</h2>");
