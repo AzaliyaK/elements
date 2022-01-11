@@ -33,7 +33,7 @@ wrapper.append(div);
 // wrapper.prepend(div);
 
 // div before hearts[0]:
-// hearts[0].before(div);
+hearts[1].before(div);
 
 //  div after hearts[0]:
 // hearts[0].after(div);
