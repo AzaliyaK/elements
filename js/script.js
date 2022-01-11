@@ -3,9 +3,12 @@
 const box = document.getElementById("box");
 const btns = document.getElementsByTagName("button");
 const circles = document.getElementsByClassName("circle");
-const hearts = document.querySelectorAll(".heart");
-const oneHeart = document.querySelector(".heart");
-const wrapper = document.querySelector(".wrapper");
+// const wrapper = document.querySelector(".wrapper"),
+//   hearts = document.querySelectorAll(".heart"),
+//   oneHeart = document.querySelector(".heart");
+const wrapper = document.querySelector(".wrapper"),
+  hearts = wrapper.querySelectorAll(".heart"),
+  oneHeart = wrapper.querySelector(".heart");
 
 btns[1].style.borderRadius = "100%";
 circles[0].style.backgroundColor = "red";
